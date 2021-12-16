@@ -76,6 +76,11 @@ where
         self.integral_term = T::zero();
     }
 
+    /// Resets the internal state of derivative term.
+    pub fn reset_derivative_term(&mut self) {
+        self.prev_measurement = None;
+    }
+
     /// Given a new measurement, calculates the next control output.
     ///
     /// # Panics
